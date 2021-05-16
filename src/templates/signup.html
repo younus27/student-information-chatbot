@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Login Page{% endblock %}
+
+{% block content %}
+	
+	
+<!-- 	<form action="#" method="post">
+		<p>Name:</p>
+		<p><input type="text" name="nm"></p>
+		<p><input type="submit" value="Submit"></p>
+	</form> -->
+
+	<div class="center" align="center">
+	<br>
+	<div class="signup_form" align="left">
+
+		<p style="text-align: center;">Create an Account</p>
+
+		<form name="signup_form" action="#" method="POST">
+			<label for="name">Name</label>
+			<input type="text" name="name" class = "field" required=""><br>
+
+			<label for="name">Email</label>
+			<input type="email" name="email" class = "field" required=""><br>
+
+			<label for="name">Password</label>
+			<input type="password" name="password" class = "field" required=""><br>
+
+			{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					{% for msg in messages %}
+						<p align="center">{{msg}}</p>
+					}
+					{% endfor %}
+				{% endif %}
+			{% endwith %}
+
+			<input type="submit" value="Sign Up" class="btn">
+		</form>
+
+		<p align="center">Already have an account?</p>
+
+		<form name="login_form" action="/login/" >
+			<input type="submit" value="Login" class="btn">
+		</form>
+	</div>
+	</div>
+{% endblock %}

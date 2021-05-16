@@ -1,0 +1,136 @@
+/*.forminput input{
+  float:left;
+}
+
+.view_person label{
+  float:right;
+  max-width: 350px;
+  background-color: white;
+  min-width: 50px;
+  text-align: left;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.view_bot label{
+  float:left;
+  max-width: 350px;
+  background-color: lightgreen;
+  min-width: 50px;
+  text-align: left;
+  border-radius: 5px;
+  padding: 5px;
+  }
+
+.view{
+  width: 500px;
+  height: 500px;
+  overflow: auto;
+  font-size: 14px;
+  text-align: bottom-right;
+}
+
+.main{
+  height: 500px;
+  overflow: auto;
+}*/
+
+      .forminput input{
+        float:left;
+        }
+
+      .view_person label{
+        float:right;
+        max-width: 350px;
+        background-color: white;
+        min-width: 50px;
+        text-align: left;
+        border-radius: 5px;
+        padding: 5px;
+        }
+
+      .view_bot label{
+        float:left;
+        max-width: 350px;
+        background-color: lightgreen;
+        min-width: 50px;
+        text-align: left;
+        border-radius: 5px;
+        padding: 5px;
+        }
+
+      #view{
+        width: 500px;
+        height: 500px;
+        font-size: 14px;
+        text-align: bottom-right;
+        }
+
+      #main{
+/*        height: 500px;
+        overflow: auto;
+*/        
+        overflow: hidden;
+        transform: rotate(180deg);
+        }
+
+
+      #outter{
+/*        height: 500px;
+        overflow:auto;
+        display:flex;
+        flex-direction:column-reverse;*/
+        height: 500px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transform: rotate(180deg);
+        direction:rtl;
+        text-align:left;
+      }
+
+/* ===================== LOGIN AND SIGNUP PAGE ==================== */
+.login_form{
+  width: 500px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  align-content: center;
+  }
+
+.signup_form{
+  width: 500px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  align-content: center;
+  }
+
+
+.field{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: left;
+  }
+
+.btn {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+
+.btn :hover {
+  background-color: #45a049;
+  }
+
+
+

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Chat Bot{% endblock %}
+
+
+
+{% block content %}
+	
+	<br><br><br>
+	<div id="outter">
+	<div align="center" id="main">
+		<table id="view">
+			<tr>
+				<th style="background-color: lightgray; ">
+					<form style="padding: 10px;">
+
+						{% for chat in current_chat %}
+
+							{% if chat["__class__"] == "view_person" %}
+								<div class= "view_person" > <label >
+								{%for message in chat["__message__"] %}
+									{{message}}<br>
+								{% endfor %}
+								</label></div>
+
+							{% else %}
+								<div class= "view_bot" > <label >
+								{%for message in chat["__message__"] %}
+									{{message}}<br>
+								{% endfor %}
+								</label></div>
+							{% endif %}
+								
+
+							{% for _ in range(chat["__br__"]) %}
+								<br>
+							{% endfor %}
+
+						{% endfor %}
+
+						<!-- <div class= "view_person" > <label >{</label></div><br> -->
+
+					</form>
+				</th>
+			</tr>
+		</table>
+	</div>
+	</div>
+	<div align="center">
+		<table>
+			<tr>
+			<th style="width: 510px">
+				<form  name="chatbot" action="#" method="POST" id="chatbot">
+						<div class="forminput">
+						<input  style="width: 100px; background-color: lightgreen;" id="query" type='submit' value='Send'>
+						<input  style="width: 400px" type="text" id="query" name="query" value="" placeholder="Type something ..." autofocus autocomplete="off">
+						
+  						</div>
+				</form>
+
+			</th>
+			</tr>
+		</table>
+	</div>
+
+
+{% endblock %}

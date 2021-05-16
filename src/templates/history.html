@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}History{% endblock %}
+
+{% block content %}
+	
+	<br><br><br>
+	<div id="outter">
+	<div align="center" id="main">
+		<table id="view">
+			<tr>
+				<th style="background-color: lightgray; ">
+					<form style="padding: 10px;">
+
+
+						{% for chat in current_chat %}
+
+							{% if chat["__class__"] == "view_person" %}
+								<div class= "view_person" > <label >
+								{%for message in chat["__message__"] %}
+									{{message}}<br>
+								{% endfor %}
+								</label></div>
+								{% for _ in range(chat["__br__"]) %}
+									<br>
+								{% endfor %}
+
+							{% elif chat["__class__"] == "view_bot"  %}
+								<div class= "view_bot" > <label >
+								{%for message in chat["__message__"] %}
+									{{message}}<br>
+								{% endfor %}
+								</label></div>
+								{% for _ in range(chat["__br__"]) %}
+									<br>
+								{% endfor %}
+
+							{% else %}
+								<br><div align="center">{{chat["__date__"]}}</div><br>
+
+							{% endif %}
+								
+							
+						{% endfor %}
+
+
+
+
+						<!-- <div class= "view_person" > <label >{</label></div><br> -->
+
+					</form>
+				</th>
+			</tr>
+		</table>
+	</div>
+	</div>
+
+{% endblock %}

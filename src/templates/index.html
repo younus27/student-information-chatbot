@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<div align="center">
+	<h1>Welcome To Student Information Chatbot</h1>
+</div>
+
+<!-- <img src="./chatbot3.jpeg"> -->
+<div align="center">
+<img src="{{url_for('static', filename='img/chatbot3.jpeg')}}" align="center" style="object-fit: cover; height: 600px; width: 1500px; align-content: center;" />
+</div>
+{% endblock %}
