@@ -33,7 +33,7 @@ def calculate_br(chat):
 
 
 
-mongo_uri = "mongodb+srv://myj:younus%4027@cluster0.kb97u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+mongo_uri = "<Your Mongo URI>"
 mongo = pymongo.MongoClient(mongo_uri)
 db = mongo["chatbot"]
 
